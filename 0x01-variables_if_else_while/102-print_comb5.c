@@ -1,30 +1,33 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
-* main - prints all possible different combinations of two digits.
-* Return: Always 0 (Success)
+* main - Entry point
+* Description: prints all possible combination of 2-digit numbers
+* Return: Always 0 (success)
 */
 int main(void)
 {
-int ones = '0';
-int tens = '0';
-int tens2 = '0';
-int ones2 = '0';
-for (tens = '0'; tens <= '9'; tens++)/* prints tens digit*/
+int c, i, k, j;
+for (c = 48; c <= 57; c++)
 {
-for (ones = '0'; ones <= '9'; ones++)/* prints ones digit*/
+for (i = 48; i <= 57; i++)
 {
-for (tens2 = '0'; tens2 <= '9'; tens2++)/* prints tens digit*/
+for (k = 48; k <= 57; k++)
 {
-for (ones2 = '0'; ones2 <= '9'; ones2++)/* prints ones digit*/
+for (j = 48; j <= 57; j++)
 {
-if ((ones < ones2) && (tens <= tens2))
+if (((k + j) > (c + i) &&  k >= c) || c < k)
 {
-putchar(tens);
-putchar(ones);
+putchar(c);
+putchar(i);
 putchar(' ');
-putchar(tens2);
-putchar(ones2);
-if (!(ones == '8' && tens == '9'))/*addes comma and space*/
+putchar(k);
+putchar(j);
+if (c + i + k + j == 227 && c == 57)
+{
+break;
+}
+else
 {
 putchar(',');
 putchar(' ');
