@@ -11,7 +11,7 @@ hours_max = 58;
 hours_tens = '0';
 while (hours_tens < '3')
 {
-  if (hours_tens == '2')
+if (hours_tens == '2')
 {
 hours_max = '4';
 }
