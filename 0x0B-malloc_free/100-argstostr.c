@@ -56,7 +56,7 @@ while (i < ac)
 len += _strlen(av[i]) + 1;
 i++;
 }
-string = malloc(len * sizeof(char));
+string = malloc(len *sizeof(char));
 if (string == NULL)
 return (NULL);
 i = 0;
