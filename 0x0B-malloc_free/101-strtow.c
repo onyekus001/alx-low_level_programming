@@ -64,7 +64,7 @@ for (k = 0; k < (len - 1);  k++)
 *(col + k) = '\0';
 *(f + j) = col;
 if (j < (count - 1))
-{	  
+{
 j++;
 }
 }
