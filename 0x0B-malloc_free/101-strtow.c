@@ -38,7 +38,7 @@ return (NULL);
 n = wrdcnt(str);
 if (n == 1)
 return (NULL);
-q = (char **)malloc(n * sizeof(char *));
+q = (char **)malloc(n *sizeof(char *));
 if (q == NULL)
 return (NULL);
 q[n - 1] = NULL;
@@ -50,7 +50,7 @@ if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 ;
 j++;
-q[qa] = (char *)malloc(j * sizeof(char));
+q[qa] = (char *)malloc(j *sizeof(char));
 j--;
 if (q[qa] == NULL)
 {
